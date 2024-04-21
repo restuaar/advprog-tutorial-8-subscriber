@@ -14,3 +14,9 @@ AMQP adalah singkatan dari Advanced Message Queuing Protocol. Ini adalah _open s
     - `localhost` adalah nama host atau alamat IP dari mesin di mana perantara pesan berjalan. Dalam kasus ini, ia berjalan pada mesin yang sama dengan klien.
     - `5672` adalah nomor port di mana message broker mendengarkan. Ini adalah port default untuk RabbitMQ, sebuah message broker populer yang menggunakan AMQP.
 
+
+#### Simulating Slow Subscriber
+![Queue RabbitMQ](src\images\slowrabbit.png)
+> Jumlah total pesan yang mengantri dapat dikaitkan dengan kombinasi beberapa faktor. Salah satunya adalah ketika publisher dengan cepat mengirim pesan ke RabbitMQ, setiap proses menambah antrian, sementara subscriber mengkonsumsi pesan pada kecepatan yang lebih lambat karena penundaan yang disengaja selama 1 detik per pemrosesan pesan. Pemrosesan yang lebih lambat ini memungkinkan pesan menumpuk dalam antrian.
+
+
