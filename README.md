@@ -20,3 +20,7 @@ AMQP adalah singkatan dari Advanced Message Queuing Protocol. Ini adalah _open s
 > Jumlah total pesan yang mengantri dapat dikaitkan dengan kombinasi beberapa faktor. Salah satunya adalah ketika publisher dengan cepat mengirim pesan ke RabbitMQ, setiap proses menambah antrian, sementara subscriber mengkonsumsi pesan pada kecepatan yang lebih lambat karena penundaan yang disengaja selama 1 detik per pemrosesan pesan. Pemrosesan yang lebih lambat ini memungkinkan pesan menumpuk dalam antrian.
 
 
+#### Multiple Slow Subscriber 
+![Console Mult Subs](src\images\consolemultsubs.png)
+![Monitoring RabbitMQ](src\images\multiplesubs.png)
+> Ketika beberapa subscriber memproses pesan secara bersamaan, kenaikan antrean pesan akan berkurang lebih cepat karena terdapat pemrosesan paralel dan peningkatan throughput. Dengan setiap subscriber menangani pesan secara independen, beban kerja didistribusikan secara lebih merata di seluruh sistem, mencegah antrean panjang dan memungkinkan lebih banyak pesan untuk diproses secara bersamaan.
